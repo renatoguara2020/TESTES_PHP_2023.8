@@ -35,8 +35,8 @@ try {
             }
         }
     }
-} catch (PDOException $error) {
-    $message = $error->getMessage();
+} catch (PDOException $e) {
+    $message = $e->getMessage();
 }
 ?>
 <!DOCTYPE html>
