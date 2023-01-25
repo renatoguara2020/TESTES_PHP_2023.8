@@ -15,7 +15,7 @@ try {
     if (isset($_POST['login'])) {
         if (empty($_POST['username']) || empty($_POST['password'])) {
             $message =
-                '<div class="alert alert-danger" role="alert"">All fields are required</div>';
+                '<div class="alert alert-danger" role="alert">All fields are required</div>';
         } else {
             $query =
                 'SELECT * FROM users WHERE username = :username AND password = :password';
@@ -29,7 +29,8 @@ try {
                 $_SESSION['username'] = $_POST['username'];
                 header('location:login_success.php');
             } else {
-                $message = '<label>Wrong Data</label>';
+                '<div class="alert alert-danger" role="alert">All fields are required</div>';
+                $message = '<div >Wrong Data</div>';
                 header('location:login_error.php');
             }
         }
