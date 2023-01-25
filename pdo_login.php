@@ -29,6 +29,7 @@ try {
                 header('location:login_success.php');
             } else {
                 $message = '<label>Wrong Data</label>';
+                header('location:login_error.php');
             }
         }
     }
@@ -54,11 +55,11 @@ try {
         } ?>
         <h3 align="">PHP Login Script using PDO</h3><br />
         <form method="post">
-            <label>Username</label>
-            <input type="text" name="username" class="form-control" />
+            <label class="form-label">Username</label>
+            <input type="text" name="username" class="form-control" placeholder=" Digite seu Username" />
             <br />
-            <label>Password</label>
-            <input type="password" name="password" class="form-control" />
+            <label class="form-label">Password</label>
+            <input type="password" name="password" class="form-control" placeholder=" Digite seu Password" />
             <br />
             <input type="submit" name="login" class="btn btn-info" value="Login" />
         </form>
