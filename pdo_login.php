@@ -14,7 +14,8 @@ try {
     $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     if (isset($_POST['login'])) {
         if (empty($_POST['username']) || empty($_POST['password'])) {
-            $message = '<label>All fields are required</label>';
+            $message =
+                '<div class="alert alert-danger" role="alert"">All fields are required</div>';
         } else {
             $query =
                 'SELECT * FROM users WHERE username = :username AND password = :password';
