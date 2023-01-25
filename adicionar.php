@@ -19,8 +19,9 @@ if (isset($_POST['Submit'])) {
             );
         }
 
-        $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-
+        if (isset($_POST['email']) && $_POST['email'] != '') {
+            $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+        }
         $cidade = filter_input(
             INPUT_POST,
             'cidade',
