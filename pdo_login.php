@@ -66,7 +66,7 @@ try {
             <br />
             <input type="submit" name="login" class="btn btn-info" value="Login" /><br><br>
             <span>Não tem login ainda ?</span><br><br>
-            <li><a href="cadastrar.php">Cadastrar Usuário</a></li>
+            <li><a href="cadastrar.html">Cadastrar Usuário</a></li>
         </form>
     </div>
     <br />
