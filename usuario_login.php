@@ -4,8 +4,8 @@ $senha = $_POST['senha'];
 
 $query = "SELECT * FROM usuarios WHERE usuario='$usuario' and senha='$senha'";
 
-$conexao = new PDO('mysql:host=127.0.0.1;dbname=sitepessoal', 'root', '');
-$resultado = $conexao->query($query);
+$conn = new PDO('mysql:host=127.0.0.1;dbname=sitepessoal', 'root', '');
+$resultado = $conn->query($query);
 $logado = $resultado->fetch();
 $id_logado = $logado['id'];
 

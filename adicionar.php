@@ -11,13 +11,13 @@ if (isset($_POST['Submit'])) {
         isset($_POST['cidade']) ||
         isset($_POST['idade'])
     ) {
-        if (isset($nome) && $nome != '') {
+        if (isset($_POST['nome']) && $_POST['nome'] != ''):
             $nome = filter_input(
                 INPUT_POST,
                 'nome',
                 FILTER_SANITIZE_SPECIAL_CHARS
             );
-        }
+        endif;
 
         if (isset($_POST['email']) && $_POST['email'] != '') {
             $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
