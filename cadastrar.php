@@ -30,7 +30,7 @@ if (isset($_POST['login'])) {
     ]);
 
     if ($stmt->rowCount() > 0) {
-        echo '<div class="alert alert-success">Usuário cadastrado com sucesso></div>';
+        echo '<div class="alert alert-success">Usuário cadastrado com sucesso</div>';
     } else {
         echo '<div class="alert alert-danger">Erro  ao acessar o banco de dados</div>';
     }
