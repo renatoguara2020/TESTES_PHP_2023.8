@@ -22,12 +22,13 @@ if (isset($_POST['login'])) {
     $stmt = $conn->prepare(
         'INSERT INTO users (username, password)VALUES (:username, :password)'
     );
-    // $stmt->bindParam(':username', $username, PDO::PARAM_STR);
-    // $stmt->bindParam(':password', $password, PDO::PARAM_STR);
-    $stmt->execute([
-        'username' => $username,
-        'password' => $password,
-    ]);
+    $stmt->bindParam(':username', $username, PDO::PARAM_STR);
+    $stmt->bindParam(':password', $password, PDO::PARAM_STR);
+    $stmt->execute();
+    // $stmt->execute([
+    //     'username' => $username,
+    //     'password' => $password,
+    // ]);
 
     if ($stmt->rowCount() > 0) {
         echo '<div class="alert alert-success">Usuário cadastrado com sucesso</div>';
