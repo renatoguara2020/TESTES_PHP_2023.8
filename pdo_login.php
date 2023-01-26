@@ -63,7 +63,8 @@ try {
             <label class="form-label">Password</label>
             <input type="password" name="password" class="form-control" placeholder=" Digite seu Password" />
             <br />
-            <input type="submit" name="login" class="btn btn-info" value="Login" />
+            <input type="submit" name="login" class="btn btn-info" value="Login" /><br><br>
+            <li><a href="cadastrar.php">Cadastrar Usuário</a></li>
         </form>
     </div>
     <br />
