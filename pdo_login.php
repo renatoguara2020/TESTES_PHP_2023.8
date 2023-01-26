@@ -30,7 +30,7 @@ try {
                 header('location:login_success.php');
             } else {
                 '<div class="alert alert-danger" role="alert">All fields are required</div>';
-                $message = '<div >Wrong Data</div>';
+                $message = '<div>Wrong Data</div>';
                 header('location:login_error.php');
             }
         }
