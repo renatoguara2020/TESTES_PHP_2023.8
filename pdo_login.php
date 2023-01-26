@@ -52,7 +52,7 @@ try {
 
 <body>
     <br />
-    <div class="container" style="width:500px;">
+    <div class="container" style="width:700px;">
         <?php if (isset($message)) {
             echo '<label class="text-danger">' . $message . '</label>';
         } ?>
