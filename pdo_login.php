@@ -36,7 +36,7 @@ try {
         }
     }
 } catch (PDOException $e) {
-    $message = $e->getMessage();
+    $message = $e->getMessage() . ' ' . $e->getTraceAsString();
 }
 ?>
 <!DOCTYPE html>
